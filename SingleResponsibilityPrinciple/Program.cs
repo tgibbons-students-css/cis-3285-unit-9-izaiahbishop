@@ -19,7 +19,9 @@ namespace SingleResponsibilityPrinciple
             var tradeStorage = new AdoNetTradeStorage(logger);
 
             var tradeProcessor = new TradeProcessor(tradeDataProvider, tradeParser, tradeStorage);
-            tradeProcessor.ProcessTrades();
+
+            String url = "http://faculty.css.edu/tgibbons/trades4.txt";
+            tradeProcessor.ProcessTrades(url);
 
             Console.ReadKey();
         }
